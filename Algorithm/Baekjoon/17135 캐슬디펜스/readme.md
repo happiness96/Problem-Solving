@@ -1,4 +1,4 @@
-[17135번]: https://www.acmicpc.net/problem/17135
+https://www.acmicpc.net/problem/17135
 
 ## 문제
 
