@@ -56,7 +56,7 @@ def bfs(start_r1, start_c1, start_r2, start_c2):
                     else: search_stack[max(search_stack) + 1] = [r2, c2, temp_r, temp_c]
             continue
         
-        if r2-r1 == 1:
+        if r2-r1 == 1:          # 파이프가 세로일 경우
             temp_r, temp_c = r2 + 1, c2
             if temp_r < N:
                 if blank[temp_r][temp_c] == 0:
