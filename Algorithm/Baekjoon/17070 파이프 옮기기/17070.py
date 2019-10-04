@@ -5,7 +5,7 @@ r=sys.stdin.readline
 blank = {}      # 집
 N = int(r())    # 집의 크기
 
-for i in range(N):
+for i in range(N):          # 벽 유무 입력 받기
     blank[i]=list(map(int,r().split()))
     
 result = 0          # 결과 (방법의 개수)
