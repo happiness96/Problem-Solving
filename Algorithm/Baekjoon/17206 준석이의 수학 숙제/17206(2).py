@@ -12,5 +12,5 @@ for i in range(1, 80001):   # 80000까지 3의 배수 혹은 7의 배수의합�
     else:
         result[i] = result[i-1]
 
-for N in map(int,r().split()):
+for N in map(int, r().split()):
     print(result[N])
