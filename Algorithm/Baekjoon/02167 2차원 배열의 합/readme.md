@@ -1,5 +1,5 @@
 https://www.acmicpc.net/problem/2167
-
+심화 문제 : https://www.acmicpc.net/problem/15724
 ## 문제
 2차원 배열이 주어졌을 때 (i, j) 위치부터 (x, y) 위치까지에 저장되어 있는 수들의 합을 구하는 프로그램을 작성하시오. 배열의 (i, j) 위치는 i행 j열을 나타낸다.
 
