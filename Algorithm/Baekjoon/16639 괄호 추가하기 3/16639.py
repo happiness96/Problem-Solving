@@ -33,15 +33,9 @@ def calculator(num1, oper, num2):        # 연산 함수
 
 
 def calculate(calc_node, number_list, op_list):          # DFS방식, 계산을 진행할 op인덱스 탐색
-    temp_number_list = []
-    temp_op_list = []
+    temp_number_list = [] + number_list
+    temp_op_list = [] + op_list
     
-    for copy in number_list:
-        temp_number_list.append(copy)
-    
-    for copy in op_list:
-        temp_op_list.append(copy)
-        
     temp_number_list.insert(calc_node, calculator(temp_number_list.pop(calc_node), temp_op_list.pop(calc_node), temp_number_list.pop(calc_node)))
     
     if len(temp_number_list) == 1:
