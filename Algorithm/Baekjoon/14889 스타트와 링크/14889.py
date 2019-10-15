@@ -12,7 +12,7 @@ result = []
 for i in range(1, N+1):     # 능력치 입력
     S[i] = [0] + list(map(int, r().split()))
 
-for start_team in list(combinations(people, N//2)):         # 완전  탐색(브루트포스)
+for start_team in list(combinations(people, N//2)):
     start = 0           # 스타트 팀 점수
     link = 0            # 링크 팀 점수
     
@@ -27,7 +27,13 @@ for start_team in list(combinations(people, N//2)):         # 완전  탐색(브
             for j in range(1, N+1):
                 if not j in start_team:
                     link += S[i][j]
+                    
+    diff = abs(start-link)
     
-    result.append(abs(start-link))
+    if diff :
+        result.append(diff)
+    else:
+        print(0)
+        exit()
 
 print(min(result))
