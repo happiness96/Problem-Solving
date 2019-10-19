@@ -14,12 +14,6 @@ if is_reversed:         # 주어진 순열 다음이 없을 경우
     print(-1)
     exit()
 
-if permu[-1] > permu[-2]:       # 맨 끝의 숫자가 그 앞자리 숫자보다 큰 경우
-    for num in permu[:-2]:
-        print(num, end=' ')
-    print(permu[-1], permu[-2])
-    exit()
-
 
 ind = 0
 for i in range(N-1):            # 나머지의 경우 뒷자리의 숫자보다 앞자리의 숫자가 작은 경우를 탐색
