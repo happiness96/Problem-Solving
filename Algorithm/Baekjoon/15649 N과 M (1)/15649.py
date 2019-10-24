@@ -7,6 +7,7 @@ N, M = map(int, r().split())        # 1부터 N까지 중복 없이  M개를 고
 visit = [False] * (N+1)
 result = [0]
 
+
 def n_and_m(num):
     result.append(num)
     
