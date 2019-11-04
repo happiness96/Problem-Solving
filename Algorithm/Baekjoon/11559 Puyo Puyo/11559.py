@@ -21,11 +21,6 @@ def find_connection(r, c, color):           # 연결되어 있는지 확인하�
     if [r, c] in connection:
         return
 
-    # print(connection)
-    #
-    # for t in puyo:
-    #     print(''.join(puyo[t]))
-
     if 1 <= r <= 12 and 1 <= c <= 6:
         if puyo[r][c] == color:
             connection.append([r, c])
