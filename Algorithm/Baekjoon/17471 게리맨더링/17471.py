@@ -2,7 +2,6 @@
 import sys
 from itertools import combinations
 r = sys.stdin.readline
-sys.setrecursionlimit(10**6)
 
 N = int(r())            # 구역의 수
 people = list(map(int, r().split()))        # 각 구역의 사람 수
