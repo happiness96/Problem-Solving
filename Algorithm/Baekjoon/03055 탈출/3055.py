@@ -72,9 +72,12 @@ def find_cave(h_location, minute):       # 비버의 굴을 찾아서 (DP)
             temp = [[h_row-1, h_col], [h_row+1, h_col], [h_row, h_col-1], [h_row, h_col+1]]
 
             for loc in temp:
-                if not forest[loc[0]][loc[1]] in 'X*':
+                if forest[loc[0]][loc[1]] in '.D':
                     if not loc in next_search:
                         next_search.append(loc)
+
+        forest[h_row][h_col] = 'S'
+
     if next_search:
         find_cave(next_search, minute + 1)
 
