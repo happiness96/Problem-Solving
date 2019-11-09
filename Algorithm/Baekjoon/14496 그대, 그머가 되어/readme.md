@@ -1,4 +1,4 @@
-https://www.acmicpc.net/status?problem_id=14496&user_id=&language_id=28&result_id=-1&from_problem=1
+https://www.acmicpc.net/problem/14496
 
 ## 문제
 선린에 합격한 대호에게는 큰 고민이 있다. 대호는 중학교 3년 내내 공부만 했기 때문에, 요즘 학생들이 사용하는 ‘야민정음’에 대해서는 문외한이다. 친구들의 대화에 끼고 싶은 대호는 야민정음을 공부하기로 했다.
