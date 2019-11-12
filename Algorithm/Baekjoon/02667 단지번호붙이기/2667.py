@@ -1,12 +1,8 @@
 # -*- encoding: utf-8 -*-
 import sys
-from collections import deque
 r_input = sys.stdin.readline
 
 N = int(r_input())      # N 지도의 크기 (N x N)
-searching = deque()
-add1 = [0, 0, 1, -1]
-add2 = [1, -1, 0, 0]
 result = []
 
 s_map = {0: ['0']*(N+2), N+1: ['0']*(N+2)}
@@ -15,24 +11,32 @@ for i in range(1, N+1):
     s_map[i] = ['0'] + list(r_input().rstrip()) + ['0']
 
 
-def find_apartment(cnt):            # 연결된 단지 찾기 (DFS)
+def find_apartment(searching, cnt):            # 연결된 단지 찾기 (DFS)
+    next_search = []
+
     while searching:
-        loc = searching.popleft()
+        loc = searching.pop()
         s_map[loc[0]][loc[1]] = '0'
         cnt += 1
 
-        for i in range(4):
-            if s_map[loc[0] + add1[i]][loc[1] + add2[i]] == '1':
-                if not [loc[0] + add1[i], loc[1] + add2[i]] in searching:
-                    searching.append([loc[0] + add1[i], loc[1] + add2[i]])
-    return cnt
+        temp = [[loc[0]-1, loc[1]], [loc[0]+1, loc[1]], [loc[0], loc[1]-1], [loc[0], loc[1]+1]]
+
+        for loc2 in temp:
+            if s_map[loc2[0]][loc2[1]] == '1':
+                if loc2 not in next_search:
+                    next_search.append(loc2)
+
+    if next_search:
+        find_apartment(next_search, cnt)
+
+    else:
+        result.append(cnt)
 
 
 for i in range(1, N+1):
     for j in range(1, N+1):
         if s_map[i][j] == '1':
-            searching.append([i, j])
-            result.append(find_apartment(0))
+            find_apartment([[i, j]], 0)
 
 print(len(result))
 for c in sorted(result):
