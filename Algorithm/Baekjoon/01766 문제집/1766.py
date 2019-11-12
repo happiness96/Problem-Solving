@@ -22,7 +22,6 @@ for i in range(M):
         info2[A] = [B]
 
 queue = []
-stack = []
 
 for i in range(1, N+1):             # 위상 정렬
     if not info1[i]:
@@ -30,7 +29,7 @@ for i in range(1, N+1):             # 위상 정렬
 
 while queue:
     temp1 = heapq.heappop(queue)
-    stack.append(str(temp1))
+    print(temp1)
 
     if temp1 in info2:
         for t in info2[temp1]:
@@ -38,5 +37,3 @@ while queue:
 
             if not info1[t]:
                 heapq.heappush(queue, t)
-
-print(' '.join(stack))
