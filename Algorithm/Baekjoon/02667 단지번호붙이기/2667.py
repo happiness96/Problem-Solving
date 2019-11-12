@@ -15,7 +15,7 @@ for i in range(1, N+1):
     s_map[i] = ['0'] + list(r_input().rstrip()) + ['0']
 
 
-def find_apartment(cnt):            # 연결된 단지 찾기
+def find_apartment(cnt):            # 연결된 단지 찾기 (DFS)
     while searching:
         loc = searching.popleft()
         s_map[loc[0]][loc[1]] = '0'
