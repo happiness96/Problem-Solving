@@ -15,7 +15,7 @@ dy = [1, -1, 0, 0]
 for i in range(N):
     population[i] = list(map(int, r_input().split()))
 
-while True:
+while True:                 # BFS
     chk = [[0] * N for _ in range(N)]
     summation = {}
     ind = 1
