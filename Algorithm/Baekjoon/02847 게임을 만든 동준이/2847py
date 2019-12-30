@@ -1,0 +1,22 @@
+# -*- encoding: utf-8 -*-
+import sys
+r_input = sys.stdin.readline
+
+N = int(r_input())
+score = [int(r_input()) for _ in range(N)]
+
+result = 0
+save = score.pop()
+
+while score:
+    tmp = score.pop()
+
+    if tmp >= save:
+        save -= 1
+
+        result += tmp - save
+
+    else:
+        save = tmp
+
+print(result)
