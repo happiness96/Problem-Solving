@@ -15,7 +15,7 @@ dx = [0, 0, 1, -1]
 dy = [1, -1, 0, 0]
 
 
-def dfs(row, col, value):
+def bfs(row, col, value):
     visit[row][col] = 1
     board[row][col] = value
 
@@ -45,7 +45,7 @@ cnt = 2
 for i in range(N):
     for j in range(N):
         if board[i][j] == 1:
-            dfs(i, j, cnt)
+            bfs(i, j, cnt)
             cnt += 1
 
 result = sys.maxsize
