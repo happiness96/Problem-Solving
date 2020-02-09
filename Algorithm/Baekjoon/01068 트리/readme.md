@@ -1,4 +1,4 @@
-
+https://www.acmicpc.net/problem/1068
 
 ## 문제
 트리에서 리프 노드란, 자식의 개수가 0인 노드를 말한다.
