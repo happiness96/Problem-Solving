@@ -1,5 +1,4 @@
-## Algorithm PS(Problem-Solving) - Python3, C/CPP, Java
+## Algorithm PS(Problem-Solving)
 
 ### BOJ (Baekjoon Online Judge)
 ### SW Expert Academy
-### Programmers
